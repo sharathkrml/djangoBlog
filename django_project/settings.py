@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('SECRET_KEY') == 'True')
+DEBUG = True
 
 ALLOWED_HOSTS = ['djngoblgapln.herokuapp.com']
 
@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['djngoblgapln.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'api.apps.ApiConfig',
+    'rest_framework',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
